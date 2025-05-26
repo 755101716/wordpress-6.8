@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>海科学院蓝海护航小分队|海洋生物科普与保护</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css">
+  <style>
+    .ocean-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background: 
+        linear-gradient(135deg, rgba(30,60,114,0.35) 0%, rgba(42,82,152,0.35) 100%),
+        url('images/background.jpg') center center/cover no-repeat;
+      color: white;
+      text-align: left;
+      padding: 2rem 1rem;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .site-logo {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      margin-right: 2rem;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(30,60,114,0.08);
+      flex-shrink: 0;
+      margin-top: -16px;
+    }
+    .header-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .ocean-header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      padding: 0;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      position: relative;
+      z-index: 1;
+    }
+    .ocean-header p {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      color: #fff;
+      font-weight: 400;
+      text-shadow:
+        0 2px 8px rgba(79,209,197,0.25),
+        0 0 2px #fff,
+        0 0 8px #fff;
+      letter-spacing: 2px;
+    }
+    @media (max-width: 600px) {
+      .ocean-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .site-logo {
+        margin: 0 0 1rem 0;
+      }
+      .header-text {
+        text-align: center;
+      }
+    }
+    .zhoushan-label {
+      font-size: 1.2rem;
+      color: #1e3c72;
+      font-weight: bold;
+      background: rgba(255,255,255,0.8);
+      padding: 2px 10px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(30,60,114,0.08);
+      writing-mode: initial;
+      transform: none;
+      letter-spacing: 2px;
+    }
+    .species-categories {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .category {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      flex: 1;
+      min-width: 0;
+    }
+    .category h3 {
+      color: #1e3c72;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1.5px solid rgba(79,209,197,0.25);
+      text-align: center;
+    }
+    .species-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      padding: 0.5rem;
+      max-height: 500px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #4fd1c5 #f0f0f0;
+    }
+    .species-grid::-webkit-scrollbar {
+      width: 8px;
+    }
+    .species-grid::-webkit-scrollbar-track {
+      background: #f0f0f0;
+      border-radius: 4px;
+    }
+    .species-grid::-webkit-scrollbar-thumb {
+      background-color: #4fd1c5;
+      border-radius: 4px;
+    }
+    
+    /* 添加自动滚动相关样式 */
+    #level1-species, #level2-species {
+      position: relative;
+      max-height: 500px;
+      overflow-y: hidden;
+    }
+    
+    #level1-species:hover, #level2-species:hover {
+      overflow-y: auto;
+    }
+    #cases-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .case-card {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      width: 300px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    /* 调整主内容区域，为海浪留出空间 */
+    .container {
+      margin: 0 300px;
+    }
+
+    /* 添加响应式调整 */
+    @media (max-width: 1200px) {
+      .wave-container {
+        width: 200px;
+      }
+      .wave {
+        width: 200px;
+      }
+      .container {
+        margin: 0 200px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .wave-container {
+        width: 100px;
+      }
+      .wave {
+        width: 100px;
+      }
+      .container {
+        margin: 0 100px;
+      }
+    }
+
+    body {
+      position: relative;
+      background: url('images/bg.jpg') center center/cover no-repeat fixed;
+      background-color: #1e3c72;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      z-index: 0;
+      left: 0; top: 0; right: 0; bottom: 0;
+      background: rgba(30,60,114,0.55);
+      pointer-events: none;
+    }
+
+    .ocean-header::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 60px;
+      pointer-events: none;
+      background: linear-gradient(to bottom, rgba(30,60,114,0.4) 0%, rgba(30,60,114,0) 100%);
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <header class="ocean-header">
+    <img src="images/logo.jpg" alt="蓝海护航logo" class="site-logo">
+    <div class="header-text">
+      <h1>海科学院蓝海护航小分队|海洋生物科普与保护</h1>
+      <p>灯塔瞭望远方 蓝海护航新程</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="species" class="section">
+      <h2>海洋生物</h2>
+      <div class="species-categories">
+        <div class="category">
+          <h3>国家一级保护动物</h3>
+          <div class="species-grid" id="level1-species"></div>
+        </div>
+        <div class="category">
+          <h3>国家二级保护动物</h3>
+          <div class="species-grid" id="level2-species"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="map-section">
+      <h2>海洋生物分布地图</h2>
+      <div id="marine-map" style="height: 600px; border-radius: 8px;"></div>
+    </section>
+
+    <section id="recognition-section">
+      <h2>上传图片识别海洋生物</h2>
+      <input type="file" id="upload-input" accept="image/*">
+      <button id="recognize-btn">识别</button>
+      <div id="recognition-result"></div>
+      <div class="share-buttons" style="margin-top: 1rem; display: none;">
+        <button onclick="shareResult()">分享识别结果</button>
+        <button onclick="saveToFavorites()">收藏</button>
+      </div>
+    </section>
+
+    <section id="knowledge-section">
+      <h2>海洋保护小知识</h2>
+      <div class="knowledge-cards">
+        <div class="knowledge-card">
+          <h3>海洋生态系统的重要性</h3>
+          <p>海洋覆盖了地球表面的71%，是地球上最大的生态系统。它调节气候，提供氧气，是无数生物的家园。</p>
+        </div>
+        <div class="knowledge-card">
+          <h3>我们能做什么</h3>
+          <ul>
+            <li>减少使用一次性塑料制品</li>
+            <li>选择可持续的海产品</li>
+            <li>参与海滩清洁活动</li>
+            <li>支持海洋保护组织</li>
+          </ul>
+        </div>
+        <div class="knowledge-card">
+          <h3>相关法律法规</h3>
+          <p>《中华人民共和国海洋环境保护法》等法律法规为海洋保护提供了法律保障。了解这些法规，做守法公民。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases-section">
+      <h2>典型海洋违法案例警示</h2>
+      <div id="cases-list" class="cases-list"></div>
+    </section>
+
+    <section id="report-section">
+      <h2>举报海洋违法事例</h2>
+      <div class="report-info">
+        <h3>举报电话</h3>
+        <ul class="report-contacts">
+          <li>中国海警：<a href="tel:95110">95110</a></li>
+          <li>海洋渔业执法：<a href="tel:12395">12395</a></li>
+          <li>环保举报热线：<a href="tel:12369">12369</a></li>
+          <li>舟山市海洋与渔业局：<a href="tel:0580-2025000">0580-2025000</a></li>
+        </ul>
+      </div>
+      <form id="report-form">
+        <label>
+          <span>违法类型：</span>
+          <input type="text" name="type" required>
+        </label>
+        <label>
+          <span>描述：</span>
+          <textarea name="description" required></textarea>
+        </label>
+        <label>
+          <span>上传证据：</span>
+          <input type="file" name="evidence" accept="image/*">
+        </label>
+        <button type="submit">提交举报</button>
+      </form>
+      <div id="report-success" style="display:none;color:green;">举报提交成功！</div>
+    </section>
+
+    <section id="community-section">
+      <h2>交流讨论区</h2>
+      <div class="comment-section">
+        <textarea id="comment-input" placeholder="分享你的想法..."></textarea>
+        <button onclick="submitComment()">发表评论</button>
+        <div id="comments-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p class="contact-info">联系我们：浙江海洋大学蓝海护航小分队</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // 自动滚动功能
+    function autoScroll(element) {
+      let scrollAmount = 1;
+      let scrollDelay = 50;
+      
+      const scroll = () => {
+        element.scrollTop += scrollAmount;
+        if (element.scrollTop >= (element.scrollHeight - element.clientHeight)) {
+          // 滚动到底部时，重置到顶部
+          element.scrollTop = 0;
+        }
+      };
+      
+      let scrollInterval = setInterval(scroll, scrollDelay);
+      
+      // 鼠标悬停时暂停滚动
+      element.addEventListener('mouseover', () => {
+        clearInterval(scrollInterval);
+      });
+      
+      // 鼠标离开时恢复滚动
+      element.addEventListener('mouseout', () => {
+        scrollInterval = setInterval(scroll, scrollDelay);
+      });
+    }
+
+    // 页面加载完成后启动自动滚动
+    document.addEventListener('DOMContentLoaded', () => {
+      const level1Species = document.getElementById('level1-species');
+      const level2Species = document.getElementById('level2-species');
+      
+      if (level1Species) autoScroll(level1Species);
+      if (level2Species) autoScroll(level2Species);
+    });
+  </script>
+</body>
+</html> 

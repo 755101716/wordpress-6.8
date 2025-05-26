@@ -1,0 +1,166 @@
+{
+  "level1": [
+    {
+      "name": "中华白海豚",
+      "image": "images/species/white-dolphin.jpg",
+      "description": "中华白海豚是国家一级保护动物，主要分布在南海和东海海域。它们体色粉白，性格温顺，是海洋生态系统的指示物种。",
+      "scientificName": "Sousa chinensis",
+      "distribution": "中国南海、东海",
+      "conservationStatus": "濒危"
+    },
+    {
+      "name": "儒艮",
+      "image": "images/species/dugong.jpg",
+      "description": "儒艮是国家一级保护动物，俗称\"美人鱼\"。它们以海草为食，主要分布在南海海域。",
+      "scientificName": "Dugong dugon",
+      "distribution": "中国南海",
+      "conservationStatus": "极危"
+    },
+    {
+      "name": "中华鲎",
+      "image": "images/species/chinese-horseshoe-crab.jpg",
+      "description": "中华鲎是国家一级保护动物，是地球上最古老的生物之一。它们的蓝色血液具有重要的医学价值。",
+      "scientificName": "Tachypleus tridentatus",
+      "distribution": "中国东南沿海",
+      "conservationStatus": "濒危"
+    },
+    {
+      "name": "红珊瑚",
+      "image": "images/species/red-coral.jpg",
+      "description": "红珊瑚是国家一级保护动物，生长缓慢，是珍贵的海洋生物资源。它们主要分布在南海和东海海域。",
+      "scientificName": "Corallium rubrum",
+      "distribution": "中国南海、东海",
+      "conservationStatus": "濒危"
+    },
+    {
+      "name": "蓝鲸",
+      "image": "images/species/blue-whale.jpg",
+      "description": "蓝鲸是地球上最大的动物，国家一级保护动物。它们主要分布在太平洋和印度洋海域。",
+      "scientificName": "Balaenoptera musculus",
+      "distribution": "太平洋、印度洋",
+      "conservationStatus": "濒危"
+    },
+    {
+      "name": "抹香鲸",
+      "image": "images/species/sperm-whale.jpg",
+      "description": "抹香鲸是国家一级保护动物，以其巨大的头部和独特的潜水能力闻名。它们主要分布在深海区域。",
+      "scientificName": "Physeter macrocephalus",
+      "distribution": "全球深海",
+      "conservationStatus": "易危"
+    },
+    {
+      "name": "长须鲸",
+      "image": "images/species/fin-whale.jpg",
+      "description": "长须鲸是国家一级保护动物，是仅次于蓝鲸的第二大动物。它们主要分布在温带和寒带海域。",
+      "scientificName": "Balaenoptera physalus",
+      "distribution": "温带、寒带海域",
+      "conservationStatus": "濒危"
+    },
+    {
+      "name": "座头鲸",
+      "image": "images/species/humpback-whale.jpg",
+      "description": "座头鲸是国家一级保护动物，以其优美的歌声和跃出水面行为闻名。它们主要分布在太平洋海域。",
+      "scientificName": "Megaptera novaeangliae",
+      "distribution": "太平洋",
+      "conservationStatus": "易危"
+    },
+    {
+      "name": "海牛",
+      "image": "images/species/manatee.jpg",
+      "description": "海牛是国家一级保护动物，是温顺的草食性海洋哺乳动物。它们主要分布在南海海域。",
+      "scientificName": "Trichechus manatus",
+      "distribution": "中国南海",
+      "conservationStatus": "濒危"
+    },
+    {
+      "name": "海狮",
+      "image": "images/species/sea-lion.jpg",
+      "description": "海狮是国家一级保护动物，是群居性的海洋哺乳动物。它们主要分布在东海和南海海域。",
+      "scientificName": "Zalophus californianus",
+      "distribution": "中国东海、南海",
+      "conservationStatus": "濒危"
+    },
+    {
+      "name": "鹦鹉螺",
+      "image": "images/species/nautilus.jpg",
+      "description": "鹦鹉螺是国家一级保护动物，拥有独特螺旋壳体，是现存最原始的头足类动物之一。",
+      "scientificName": "Nautilus pompilius",
+      "distribution": "西太平洋、印度洋热带海域",
+      "conservationStatus": "濒危"
+    },
+    {
+      "name": "太平洋丽龟",
+      "image": "images/species/pacific-ridley-turtle.jpg",
+      "description": "太平洋丽龟是国家一级保护动物，体型较小，分布于太平洋热带和亚热带海域。",
+      "scientificName": "Lepidochelys olivacea",
+      "distribution": "太平洋热带和亚热带海域",
+      "conservationStatus": "濒危"
+    }
+  ],
+  "level2": [
+    {
+      "name": "玳瑁",
+      "image": "images/species/hawksbill-turtle.jpg",
+      "description": "玳瑁是国家二级保护动物，以其美丽的龟壳闻名。它们主要分布在南海和东海海域。",
+      "scientificName": "Eretmochelys imbricata",
+      "distribution": "中国南海、东海",
+      "conservationStatus": "濒危"
+    },
+    {
+      "name": "绿海龟",
+      "image": "images/species/green-turtle.jpg",
+      "description": "绿海龟是国家二级保护动物，是海洋中最大的硬壳海龟。它们以海草为食，主要分布在南海海域。",
+      "scientificName": "Chelonia mydas",
+      "distribution": "中国南海",
+      "conservationStatus": "濒危"
+    },
+    {
+      "name": "文昌鱼",
+      "image": "images/species/amphioxus.jpg",
+      "description": "文昌鱼是国家二级保护动物，是研究脊椎动物起源的重要模式生物。它们主要分布在南海海域。",
+      "scientificName": "Branchiostoma belcheri",
+      "distribution": "中国南海",
+      "conservationStatus": "濒危"
+    },
+    {
+      "name": "大砗磲",
+      "image": "images/species/giant-clam.jpg",
+      "description": "大砗磲是国家二级保护动物，是最大的双壳类动物。它们主要分布在南海海域，是珊瑚礁生态系统的重要成员。",
+      "scientificName": "Tridacna gigas",
+      "distribution": "中国南海",
+      "conservationStatus": "濒危"
+    },
+    {
+      "name": "虎鲸",
+      "image": "images/species/killer-whale.jpg",
+      "description": "虎鲸是海洋中的顶级掠食者，体型庞大，行动敏捷，具有高度的社会性和智慧。",
+      "scientificName": "Orcinus orca",
+      "distribution": "全球温带和极地海域",
+      "conservationStatus": "易危"
+    },
+    {
+      "name": "克氏海马",
+      "image": "images/species/kerr-seahorse.jpg",
+      "description": "克氏海马是国家二级保护动物，体色多变，分布于中国沿海及西太平洋地区。",
+      "scientificName": "Hippocampus kuda",
+      "distribution": "中国沿海、西太平洋",
+      "conservationStatus": "易危"
+    },
+    {
+      "name": "瓶鼻海豚",
+      "image": "images/species/bottlenose-dolphin.jpg",
+      "description": "瓶鼻海豚是国家二级保护动物，智力高，性格活泼，广泛分布于全球温带和热带海域。",
+      "scientificName": "Tursiops truncatus",
+      "distribution": "全球温带和热带海域",
+      "conservationStatus": "易危"
+    },
+    {
+      "name": "石珊瑚",
+      "image": "images/species/stone-coral.jpg",
+      "description": "石珊瑚是国家二级保护动物，是珊瑚礁生态系统的重要构建者，分布于热带和亚热带海域。",
+      "scientificName": "Scleractinia",
+      "distribution": "热带和亚热带海域",
+      "conservationStatus": "易危"
+    }
+  ]
+}

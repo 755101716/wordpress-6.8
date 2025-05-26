@@ -1,0 +1,106 @@
+{
+  "大黄鱼": {
+    "name": "大黄鱼",
+    "image": "assets/zhoushan/large_yellow_croaker.jpg",
+    "description": "大黄鱼是中国重要的经济鱼类，体色金黄，肉质细嫩鲜美。由于过度捕捞，野生种群数量锐减，现为国家二级保护动物。",
+    "scientificName": "Larimichthys crocea",
+    "distribution": "中国东海、南海沿岸",
+    "conservationStatus": "濒危",
+    "habitat": "主要栖息在东海海域，水深20-60米处",
+    "conservation": "国家二级保护动物，需要合理捕捞"
+  },
+  "小黄鱼": {
+    "name": "小黄鱼",
+    "image": "assets/zhoushan/small_yellow_croaker.jpg",
+    "description": "小黄鱼体型较小，体色金黄，是舟山海域常见鱼类。肉质鲜美，适合多种烹饪方式。",
+    "habitat": "主要分布在东海海域，水深10-40米处",
+    "conservation": "常见经济鱼类，需注意捕捞季节"
+  },
+  "带鱼": {
+    "name": "带鱼",
+    "image": "assets/zhoushan/hairtai.jpg",
+    "description": "带鱼体形细长如带，银白色，是中国沿海重要的经济鱼类之一。肉质细嫩，营养丰富，深受欢迎。",
+    "scientificName": "Trichiurus lepturus",
+    "distribution": "中国东海、南海及全球温带、热带海域",
+    "conservationStatus": "近危",
+    "habitat": "主要分布在东海海域，水深20-100米处的中下层水域",
+    "conservation": "重要经济鱼类，需要控制捕捞强度，保护产卵场"
+  },
+  "墨鱼": {
+    "name": "墨鱼",
+    "image": "assets/zhoushan/cuttlefish.jpg",
+    "description": "墨鱼是舟山海域常见的头足类动物，体内有墨囊，遇到危险时会喷出墨汁。肉质鲜美，是海鲜佳品。",
+    "habitat": "主要分布在东海海域，水深10-50米处",
+    "conservation": "常见经济物种，需注意捕捞季节"
+  },
+  "梭子蟹": {
+    "name": "梭子蟹",
+    "image": "assets/zhoushan/swimming_crab.jpg",
+    "description": "梭子蟹是舟山特产，壳呈梭形，肉质鲜美，特别是蟹黄更是美味。是舟山海鲜的代表之一。",
+    "habitat": "主要分布在东海海域，水深5-30米处",
+    "conservation": "重要经济物种，需注意保护幼蟹"
+  },
+  "海蜇": {
+    "name": "海蜇",
+    "image": "assets/zhoushan/jellyfish.jpg",
+    "description": "海蜇是舟山海域常见的水母类生物，经过加工后可食用，口感爽脆。也是重要的海洋生物资源。",
+    "habitat": "主要分布在东海海域，水深0-20米处",
+    "conservation": "需注意合理捕捞，保护生态平衡"
+  },
+  "鲳鱼": {
+    "name": "鲳鱼",
+    "image": "assets/zhoushan/pomfret.jpg",
+    "description": "鲳鱼体形扁平，银白色，是舟山海域重要的经济鱼类。肉质细嫩，适合多种烹饪方式。",
+    "habitat": "主要分布在东海海域，水深10-50米处",
+    "conservation": "重要经济鱼类，需注意保护"
+  },
+  "马鲛鱼": {
+    "name": "马鲛鱼",
+    "image": "assets/zhoushan/mackerel.jpg",
+    "description": "马鲛鱼是舟山海域常见的大型鱼类，体形修长，游速快。肉质鲜美，是重要的经济鱼类。",
+    "habitat": "主要分布在东海海域，水深20-100米处",
+    "conservation": "重要经济鱼类，需注意保护"
+  },
+  "海鳗": {
+    "name": "海鳗",
+    "image": "assets/zhoushan/moray_eel.jpg",
+    "description": "海鳗是舟山海域常见的鳗鱼，体型细长，肉质鲜美。是舟山传统海鲜之一。",
+    "habitat": "主要分布在东海海域，水深10-40米处",
+    "conservation": "常见经济鱼类，需注意资源保护"
+  },
+  "海参": {
+    "name": "海参",
+    "image": "assets/zhoushan/sea_cucumber.jpg",
+    "description": "海参是舟山海域珍贵的海产品，营养丰富，具有很高的药用价值。是舟山特色海产品之一。",
+    "habitat": "主要分布在东海海域，水深5-30米处",
+    "conservation": "需注意合理捕捞，保护资源"
+  },
+  "贻贝": {
+    "name": "贻贝",
+    "image": "assets/zhoushan/mussel.jpg",
+    "description": "贻贝是舟山海域常见的贝类，肉质鲜美，营养丰富。是舟山重要的养殖品种。",
+    "habitat": "主要分布在东海海域，水深0-20米处",
+    "conservation": "常见养殖品种，需注意养殖环境"
+  },
+  "海带": {
+    "name": "海带",
+    "image": "assets/zhoushan/kelp.jpg",
+    "description": "海带是舟山海域重要的藻类，营养丰富，是重要的海产品。也是舟山重要的养殖品种。",
+    "habitat": "主要分布在东海海域，水深0-10米处",
+    "conservation": "常见养殖品种，需注意养殖环境"
+  },
+  "海螺": {
+    "name": "海螺",
+    "image": "assets/zhoushan/sea_snail.jpg",
+    "description": "海螺是舟山海域常见的贝类，肉质鲜美，是舟山特色海鲜之一。",
+    "habitat": "主要分布在东海海域，水深5-30米处",
+    "conservation": "常见经济物种，需注意资源保护"
+  },
+  "海胆": {
+    "name": "海胆",
+    "image": "assets/zhoushan/sea_urchin.jpg",
+    "description": "海胆是舟山海域珍贵的海产品，肉质鲜美，营养丰富。是舟山特色海鲜之一。",
+    "habitat": "主要分布在东海海域，水深5-30米处",
+    "conservation": "需注意合理捕捞，保护资源"
+  }
+} 

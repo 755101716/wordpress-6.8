@@ -1,0 +1,26 @@
+[
+  {
+    "title": "非法捕捞珊瑚",
+    "description": "某地渔民为牟利，非法采挖大量珊瑚，导致珊瑚礁生态系统严重受损。",
+    "image": "assets/illegal_coral.jpg",
+    "date": "2023-03-10",
+    "location": "南海海域",
+    "penalty": "罚款10万元，没收非法所得"
+  },
+  {
+    "title": "滥捕濒危鱼类",
+    "description": "渔船在禁渔期内使用违规渔具捕捞濒危鱼类，严重威胁物种存续。",
+    "image": "assets/illegal_fishing.jpg",
+    "date": "2023-04-20",
+    "location": "东海海域",
+    "penalty": "罚款8万元，没收渔具"
+  },
+  {
+    "title": "非法倾倒垃圾",
+    "description": "某渔船在舟山海域非法倾倒生活垃圾，被海警当场查获。",
+    "image": "assets/illegal_dump.png",
+    "date": "2023-05-15",
+    "location": "舟山海域",
+    "penalty": "罚款5万元，责令清理"
+  }
+] 

@@ -1,0 +1,62 @@
+[
+  {
+    "category": "鱼类",
+    "items": [
+      {
+        "name": "小丑鱼",
+        "image": "assets/clownfish.png",
+        "desc": "小丑鱼以其鲜艳的橙白相间色彩著称，常见于珊瑚礁。"
+      },
+      {
+        "name": "蓝魔鬼鱼",
+        "image": "assets/blue_tang.jpg",
+        "desc": "蓝魔鬼鱼体色鲜蓝，性格活泼，是热带海洋常见观赏鱼。"
+      }
+    ]
+  },
+  {
+    "category": "贝类",
+    "items": [
+      {
+        "name": "扇贝",
+        "image": "assets/scallop.jpg",
+        "desc": "扇贝壳体扁平，呈扇形，是重要的海洋经济贝类。"
+      },
+      {
+        "name": "鲍鱼",
+        "image": "assets/abalone.jpg",
+        "desc": "鲍鱼肉质鲜美，壳内有珍珠层，是名贵海产。"
+      }
+    ]
+  },
+  {
+    "category": "珊瑚",
+    "items": [
+      {
+        "name": "脑珊瑚",
+        "image": "assets/brain_coral.jpg",
+        "desc": "脑珊瑚形状酷似大脑，是珊瑚礁的重要构建者。"
+      },
+      {
+        "name": "鹿角珊瑚",
+        "image": "assets/staghorn_coral.jpg",
+        "desc": "鹿角珊瑚分枝如鹿角，生长迅速，对生态系统极为重要。"
+      }
+    ]
+  },
+  {
+    "category": "甲壳类",
+    "items": [
+      {
+        "name": "螃蟹",
+        "image": "assets/crab.jpg",
+        "desc": "螃蟹有坚硬的外壳和两只大螯，分布广泛。"
+      },
+      {
+        "name": "龙虾",
+        "image": "assets/lobster.jpg",
+        "desc": "龙虾体型较大，肉质鲜美，是高档海鲜。"
+      }
+    ]
+  }
+] 
